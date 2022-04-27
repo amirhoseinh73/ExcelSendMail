@@ -46,8 +46,8 @@ class Home extends BaseController
         foreach ( $sheet_data as $row ) {
             // process element here;
             // access column by index
-            $name = $row[ 0 ];
-            $email = $row[ 1 ];
+            $name = trim( $row[ 0 ] );
+            $email = trim( $row[ 1 ] );
 
             if ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 
