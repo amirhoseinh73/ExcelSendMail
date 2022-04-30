@@ -49,12 +49,12 @@ class Home extends BaseController
         
         fwrite( $excel, pack( 'CCC', 0xef, 0xbb, 0xbf ) );
 
-        $i = 60;
+        $i = 120;
         var_dump( count( $sheet_data ) );
         while ( $i < count( $sheet_data ) ) {
             $row = $sheet_data[ $i ];
             $i++;
-            if ( $i > 70 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
+            if ( $i > 140 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
             echo $i . "<br/>";
             // process element here;
             // access column by index

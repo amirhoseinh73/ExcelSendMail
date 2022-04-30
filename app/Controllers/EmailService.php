@@ -20,7 +20,7 @@ class EmailService {
     public function send_email() {
 
         $message = "<div style='direction: ltr !important;'>
-                    29-Apr-2022
+                    30-Apr-2022
                     <br/>
                     Dear <strong>{$this->name}</strong>
 
