@@ -31,30 +31,28 @@ class Home extends BaseController
         $email_service = new EmailService();
         $email_service->subject = "Invitaion for Article (Journal of Composites and Compounds)";
 
-        $email_address = "/log-mail.csv";
+        $i = 260;
+        $email_address = "/log-mail-$i.csv";
         
         $excel = fopen(FCPATH . $email_address, "w+");
-
         $array_titles = array(
             "name",
             "email",
             "status"
         );
-
         $excel_title = implode(',',$array_titles);
         fwrite($excel,
             ''. $excel_title .'
             '
         );
-        
         fwrite( $excel, pack( 'CCC', 0xef, 0xbb, 0xbf ) );
 
-        $i = 140;
+        
         var_dump( count( $sheet_data ) );
         while ( $i < count( $sheet_data ) ) {
             $row = $sheet_data[ $i ];
             $i++;
-            if ( $i > 160 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
+            if ( $i > 280 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
             echo $i . "<br/>";
             // process element here;
             // access column by index

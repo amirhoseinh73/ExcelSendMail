@@ -18,9 +18,9 @@ class EmailService {
     public string $subject     = "";
 
     public function send_email() {
-
+        $date = date("d-M-Y");
         $message = "<div style='direction: ltr !important;'>
-                    30-Apr-2022
+                    $date
                     <br/>
                     Dear <strong>{$this->name}</strong>
 
