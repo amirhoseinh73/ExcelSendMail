@@ -31,7 +31,7 @@ class Home extends BaseController
         $email_service = new EmailService();
         $email_service->subject = "Invitaion for Article (Journal of Composites and Compounds)";
 
-        $i = 260;
+        $i = 380;
         $email_address = "/log-mail-$i.csv";
         
         $excel = fopen(FCPATH . $email_address, "w+");
@@ -52,7 +52,7 @@ class Home extends BaseController
         while ( $i < count( $sheet_data ) ) {
             $row = $sheet_data[ $i ];
             $i++;
-            if ( $i > 280 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
+            if ( $i > 400 && $i < count( $sheet_data ) - 2 ) $i = count( $sheet_data ) - 2;
             echo $i . "<br/>";
             // process element here;
             // access column by index
